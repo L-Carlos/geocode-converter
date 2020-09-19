@@ -1,9 +1,5 @@
-import asyncio
-
 import aiohttp
 from ratelimit import limits, sleep_and_retry
-
-from .configs import Configs
 
 
 @sleep_and_retry
@@ -53,30 +49,3 @@ async def parse_dict(dict_obj: dict) -> dict:
     else:
         print("dict doesn't have the 'address' key")
         return None
-
-
-"""
-async def main():
-
-    items = [
-        [-26.245412, -48.804151],
-        [-26.338351, -48.805051],
-        [-26.289929, -48.774843],
-        [-23.987037, -46.296200],
-        [-26.245412, -48.804151],
-        [-26.338351, -48.805051],
-        [-26.289929, -48.774843],
-        [-23.987037, -46.296200],
-    ]
-
-    for id, item in enumerate(items):
-        search = await fetch(*item, Configs.API_KEY)
-        if search is not None:
-            result = await parse_dict(search)
-            print(id, result)
-
-
-if __name__ == "__main__":
-    loop = asyncio.get_event_loop()
-    loop.run_until_complete(main())
-"""
