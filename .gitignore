@@ -139,3 +139,7 @@ cython_debug/
 
 # vs code
 .vscode/
+
+# data
+output.xlsx
+input.xlsx

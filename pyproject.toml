@@ -9,6 +9,7 @@ python = "^3.8"
 aiohttp = {extras = ["speedups"], version = "^3.6.2"}
 python-dotenv = "^0.14.0"
 ratelimit = "^2.2.1"
+openpyxl = "^3.0.5"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
